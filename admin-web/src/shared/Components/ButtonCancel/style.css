@@ -1,0 +1,9 @@
+#button-cancel {
+  background-color: var(--red-cancel);
+  color: var(--text-white);
+}
+
+#button-cancel:hover {
+  opacity: 0.8;
+  transition: 0.2s;
+}

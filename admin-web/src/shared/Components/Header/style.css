@@ -1,0 +1,19 @@
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+#header img:nth-child(1) {
+  height: 5rem;
+}
+
+#header img {
+  height: 4rem;
+}
+
+#header-subtitle {
+  font: 800 1.8rem "K2D";
+  margin-top: -64px;
+}

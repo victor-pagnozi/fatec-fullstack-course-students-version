@@ -1,10 +1,17 @@
-import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import { Layout } from "./layout";
+import { CreateProductPage } from "./pages/CreateProduct";
 
 function App() {
   return (
-    <section className="body">
-      <h1>Hello world</h1>
-    </section>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route
+          path="/create" 
+          element={<CreateProductPage />}>
+        </Route>
+      </Route>
+    </Routes>
   );
 }
 
