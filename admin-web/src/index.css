@@ -52,15 +52,19 @@ button {
   font-size: 1.3rem;
 }
 
+body {
+  background-color: var(--primary-color);
+}
+
 .body {
   height: 100vh;
-  width: 100vw;
   display: grid;
   align-items: center;
   justify-items: center;
   text-align: center;
   color: var(--text-white);
   background-color: var(--primary-color);
+  padding-bottom: 5rem;
 }
 
 .centered {

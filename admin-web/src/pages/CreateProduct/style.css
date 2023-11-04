@@ -1,0 +1,46 @@
+.body h1 {
+  font: 900 3rem "ACME";
+}
+
+.body form {
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 6px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.body form span {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.body form span:nth-child(3) {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  width: 15rem;
+  margin-top: 16px;
+}
+
+.body form span label {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+form .buttons-form {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+form .buttons-form button {
+  width: 17rem;
+}

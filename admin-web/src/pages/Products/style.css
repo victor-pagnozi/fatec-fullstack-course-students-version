@@ -1,0 +1,15 @@
+#products-list {
+  height: 70vh;
+  width: 60vw;
+}
+
+.actions-products-list {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actions-products-list .actions-products-list-button {
+  width: 50%;
+}

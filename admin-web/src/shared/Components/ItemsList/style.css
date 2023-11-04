@@ -1,0 +1,74 @@
+#items-list, .menu-items {
+  background-color: var(--color-gray);
+  color: black;
+  border-radius: 25px;
+  padding: 0 1.5rem;
+}
+
+#items-list {
+  cursor: pointer;
+}
+
+#items-list h2 {
+  font: 800 4rem "K2D";
+}
+
+#items-list div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.menu-items table {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  border: 1px solid #edd8c0;
+  overflow: hidden;
+}
+
+.menu-items table thead {
+  color: var(--primary-color);
+  font: 600 1.5rem 'K2D';
+  background-color: #edd7c0;
+}
+
+.menu-items table thead tr .value-column {
+  width: 10rem;
+}
+
+.menu-items table thead tr td:last-child {
+  padding: 0 2rem;
+}
+
+.menu-items table tbody {
+  font: 900 1.4rem "K2D";
+  background-color: white;
+  border-radius: 18px;
+  height: 5rem;
+}
+
+.menu-items table tbody tr td:first-child {
+  padding: 1rem;
+}
+
+.menu-items table tbody tr td:nth-child(2){
+  font-size: 0.9rem;
+}
+
+.table-actions svg:nth-child(2) {
+  margin-left: 0.5rem;
+}
+
+.table-actions svg {
+  cursor: pointer;
+}
