@@ -7,15 +7,21 @@ import { useEffect, useState } from "react";
 export const ProductsPage = () => {
   const [products, setProducts] = useState([]);
 
-  useEffect(() => {
-    const productAsString = window.localStorage.getItem("products") ?? "[]";
+  async function loadProducts() {
+    const response = await fetch("http://localhost:3000/products");
 
-    setProducts(JSON.parse(productAsString));
+    const data = await response.json();
+
+    setProducts(data);
+  }
+
+  useEffect(() => {
+    loadProducts();
   }, []);
 
   return (
     <section id="products-list">
-      <ItemsList name="PIZZA" products={products} />
+      <ItemsList name="PIZZA" products={products} loadProducts={loadProducts} />
 
       <div className="actions-products-list">
         <Link to={"/create"} className="actions-products-list-button">
