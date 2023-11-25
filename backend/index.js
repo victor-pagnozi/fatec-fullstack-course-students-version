@@ -1,10 +1,13 @@
 import express from 'express';
 import { initializeDatabase } from './config/database.js';
 import { Products } from './models/products.js';
+import cors from 'cors';
 
 const app = express();
 const port = 3000;
 app.use(express.json());
+
+app.use(cors());
 
 await initializeDatabase();
 
