@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./style.css";
 import { ChevronDown, FileEdit, Trash2 } from "lucide-react";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
 export const ItemsList = ({ name, products, loadProducts }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -58,7 +59,9 @@ export const ItemsList = ({ name, products, loadProducts }) => {
                   <td>{(item.price / 100).toFixed(2)}</td>
 
                   <td className="table-actions">
-                    <FileEdit />
+                    <Link to={`/update/${item.id}`}>
+                      <FileEdit />
+                    </Link>
                     <Trash2 color="red" onClick={() => erase(item.id)} />
                   </td>
                 </tr>

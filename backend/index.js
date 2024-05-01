@@ -35,6 +35,16 @@ app.get('/products', async (req, res) => {
   }
 })
 
+app.get('/products/:id', async (req, res) => {
+  try {
+    const product = await Products.findByPk(req.params.id);
+
+    return res.status(200).json(product);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+})
+
 app.put('/products/:id', async (req, res) => {
   try {
     await Products.update({
