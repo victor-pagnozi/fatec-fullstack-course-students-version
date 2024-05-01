@@ -8,7 +8,8 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<ProductsPage />} />
-        <Route path="/create" element={<CreateProductPage />}></Route>
+        <Route path="/create" element={<CreateProductPage />} />
+        <Route path="/update/:id" element={<CreateProductPage />} />
       </Route>
     </Routes>
   );
