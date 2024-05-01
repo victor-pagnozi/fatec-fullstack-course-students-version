@@ -1,9 +1,29 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import "./style.css";
 import { ChevronDown, FileEdit, Trash2 } from "lucide-react";
+import { toast } from "react-toastify";
 
-export const ItemsList = ({ name, products }) => {
+export const ItemsList = ({ name, products, loadProducts }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const erase = async (productId) => {
+    const canDelete = window.confirm(
+      "Você deseja realmente deletar o produto?"
+    );
+
+    if (canDelete) {
+      await fetch(`http://localhost:3000/products/${productId}`, {
+        method: "DELETE",
+      });
+
+      toast.success("Produto deletado com sucesso!", {
+        theme: "colored",
+      });
+
+      loadProducts();
+    }
+  };
 
   return (
     <>
@@ -39,7 +59,7 @@ export const ItemsList = ({ name, products }) => {
 
                   <td className="table-actions">
                     <FileEdit />
-                    <Trash2 color="red" />
+                    <Trash2 color="red" onClick={() => erase(item.id)} />
                   </td>
                 </tr>
               ))}
